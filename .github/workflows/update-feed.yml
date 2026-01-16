@@ -14,8 +14,10 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout main
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
 
       - name: Setup pnpm
         uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
@@ -31,13 +33,36 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run scraper and generate feed
+      - name: Fetch existing events from gh-pages
+        run: |
+          git fetch origin gh-pages:gh-pages 2>/dev/null || true
+          git show gh-pages:events.json > events.json 2>/dev/null || echo '{"events":[]}' > events.json
+
+      - name: Run scraper
         run: node src/index.js
 
-      - name: Commit and push changes
+      - name: Deploy to gh-pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Save generated files to temp location
+          cp feed.xml /tmp/feed.xml
+          cp events.json /tmp/events.json
+          
+          # Switch to gh-pages branch (create orphan if doesn't exist)
+          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+            git checkout gh-pages
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . 2>/dev/null || true
+          fi
+          
+          # Copy generated files
+          cp /tmp/feed.xml feed.xml
+          cp /tmp/events.json events.json
+          
+          # Commit and push
           git add feed.xml events.json
           git diff --staged --quiet || git commit -m "Update feed"
-          git push
+          git push origin gh-pages
