@@ -1,0 +1,26 @@
+{
+  "name": "synergy-to-rss",
+  "version": "1.0.0",
+  "description": "Scrapes events from synergyfornebu.no and generates an Atom RSS feed",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "rss",
+    "atom",
+    "scraper",
+    "synergy",
+    "fornebu"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0-rc.12",
+    "feed": "^4.2.2",
+    "node-fetch": "^3.3.2"
+  }
+}
