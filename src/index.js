@@ -199,7 +199,7 @@ function generateFeed(eventsData) {
     updated: new Date(eventsData.lastUpdated),
     generator: "synergy-to-rss",
     feedLinks: {
-      atom: "https://github.com/synergy-to-rss/feed.xml",
+      atom: "https://telenorbenedicte.github.io/synergy-to-rss/feed.xml",
     },
   });
 
