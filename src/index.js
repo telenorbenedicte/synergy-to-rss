@@ -135,6 +135,22 @@ function parseEventPage(html, url) {
 }
 
 /**
+ * Check if an event's content has meaningfully changed
+ */
+function hasEventChanged(existing, fresh) {
+  return (
+    existing.title !== fresh.title ||
+    existing.description !== fresh.description ||
+    existing.descriptionHtml !== fresh.descriptionHtml ||
+    existing.location !== fresh.location ||
+    existing.date !== fresh.date ||
+    existing.image !== fresh.image ||
+    existing.registrationUrl !== fresh.registrationUrl ||
+    existing.category !== fresh.category
+  );
+}
+
+/**
  * Load existing events from events.json
  */
 async function loadExistingEvents() {
@@ -155,23 +171,40 @@ async function loadExistingEvents() {
  * Merge new events with existing events (append-only)
  */
 function mergeEvents(existingData, newEvents) {
-  const existingIds = new Set(existingData.events.map((e) => e.id));
+  const existingById = new Map(existingData.events.map((e) => [e.id, e]));
   const now = new Date().toISOString();
 
+  // New events get both firstSeen and lastUpdated set to now
   const eventsToAdd = newEvents
-    .filter((event) => !existingIds.has(event.id))
+    .filter((event) => !existingById.has(event.id))
     .map((event) => ({
       ...event,
       firstSeen: now,
+      lastUpdated: now,
     }));
 
-  // Update existing events with fresh data (but keep firstSeen)
+  // Update existing events with fresh data
   const updatedExisting = existingData.events.map((existing) => {
     const fresh = newEvents.find((e) => e.id === existing.id);
     if (fresh) {
+      // Migration: ensure firstSeen exists (fallback to now)
+      const firstSeen = existing.firstSeen || now;
+      
+      // Check if content has changed
+      if (hasEventChanged(existing, fresh)) {
+        return {
+          ...fresh,
+          firstSeen,
+          lastUpdated: now,
+        };
+      }
+      
+      // No changes - keep existing timestamps
+      // Migration: ensure lastUpdated exists (fallback to firstSeen or now)
       return {
         ...fresh,
-        firstSeen: existing.firstSeen,
+        firstSeen,
+        lastUpdated: existing.lastUpdated || firstSeen,
       };
     }
     return existing;
@@ -203,13 +236,17 @@ function generateFeed(eventsData) {
     },
   });
 
-  // Sort events by date (newest first)
+  // Sort events by firstSeen (newest discoveries first)
   const sortedEvents = [...eventsData.events].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
+    (a, b) => new Date(b.firstSeen || 0) - new Date(a.firstSeen || 0)
   );
 
   for (const event of sortedEvents) {
-    const eventDate = new Date(event.date);
+    // Use firstSeen for published date, lastUpdated for updated date
+    // Fall back to current time if timestamps are missing (migration case)
+    const now = new Date();
+    const publishedDate = event.firstSeen ? new Date(event.firstSeen) : now;
+    const updatedDate = event.lastUpdated ? new Date(event.lastUpdated) : publishedDate;
 
     // Build content with image and description
     let content = "";
@@ -229,7 +266,8 @@ function generateFeed(eventsData) {
       link: event.url,
       description: event.description.substring(0, 300) + (event.description.length > 300 ? "..." : ""),
       content,
-      date: eventDate,
+      date: updatedDate,       // Atom <updated> element
+      published: publishedDate, // Atom <published> element
       image: event.image,
       category: event.category ? [{ name: event.category }] : [],
     });
