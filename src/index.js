@@ -170,7 +170,8 @@ async function loadExistingEvents() {
 /**
  * Merge new events with existing events (append-only)
  */
-function mergeEvents(existingData, newEvents) {
+function mergeEvents(existingData, newEvents, options = {}) {
+  const { forceUpdate = false } = options;
   const existingById = new Map(existingData.events.map((e) => [e.id, e]));
   const now = new Date().toISOString();
   let hasChanges = false;
@@ -218,8 +219,8 @@ function mergeEvents(existingData, newEvents) {
 
   return {
     events: [...updatedExisting, ...eventsToAdd],
-    // Only update lastUpdated if there were actual changes
-    lastUpdated: hasChanges ? now : (existingData.lastUpdated || now),
+    // Update lastUpdated if force update is enabled OR there were actual changes
+    lastUpdated: (forceUpdate || hasChanges) ? now : (existingData.lastUpdated || now),
   };
 }
 
@@ -296,6 +297,12 @@ function delay(ms) {
 async function main() {
   console.log("Starting Synergy events scraper...\n");
 
+  // Check for force update flag
+  const forceUpdate = process.env.FORCE_UPDATE === 'true';
+  if (forceUpdate) {
+    console.log('Force update enabled - timestamp will be updated regardless of changes\n');
+  }
+
   // Fetch events list page
   const eventsListHtml = await fetchHtml(EVENTS_PAGE);
   const eventUrls = parseEventsList(eventsListHtml);
@@ -323,7 +330,7 @@ async function main() {
   const existingData = await loadExistingEvents();
   console.log(`Existing events in database: ${existingData.events.length}`);
 
-  const mergedData = mergeEvents(existingData, newEvents);
+  const mergedData = mergeEvents(existingData, newEvents, { forceUpdate });
   const newCount = mergedData.events.length - existingData.events.length;
   console.log(`New events added: ${newCount}`);
   console.log(`Total events in database: ${mergedData.events.length}`);
