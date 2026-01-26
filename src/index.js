@@ -173,6 +173,7 @@ async function loadExistingEvents() {
 function mergeEvents(existingData, newEvents) {
   const existingById = new Map(existingData.events.map((e) => [e.id, e]));
   const now = new Date().toISOString();
+  let hasChanges = false;
 
   // New events get both firstSeen and lastUpdated set to now
   const eventsToAdd = newEvents
@@ -183,6 +184,10 @@ function mergeEvents(existingData, newEvents) {
       lastUpdated: now,
     }));
 
+  if (eventsToAdd.length > 0) {
+    hasChanges = true;
+  }
+
   // Update existing events with fresh data
   const updatedExisting = existingData.events.map((existing) => {
     const fresh = newEvents.find((e) => e.id === existing.id);
@@ -192,6 +197,7 @@ function mergeEvents(existingData, newEvents) {
       
       // Check if content has changed
       if (hasEventChanged(existing, fresh)) {
+        hasChanges = true;
         return {
           ...fresh,
           firstSeen,
@@ -212,7 +218,8 @@ function mergeEvents(existingData, newEvents) {
 
   return {
     events: [...updatedExisting, ...eventsToAdd],
-    lastUpdated: now,
+    // Only update lastUpdated if there were actual changes
+    lastUpdated: hasChanges ? now : (existingData.lastUpdated || now),
   };
 }
 
