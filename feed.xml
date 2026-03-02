@@ -2,13 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.synergyfornebu.no/arrangementer</id>
     <title>Synergy Fornebu - Arrangementer</title>
-    <updated>2026-02-26T12:36:46.914Z</updated>
+    <updated>2026-03-02T18:31:15.730Z</updated>
     <generator>synergy-to-rss</generator>
     <link rel="alternate" href="https://www.synergyfornebu.no/arrangementer"/>
     <link rel="self" href="https://telenorbenedicte.github.io/synergy-to-rss/feed.xml"/>
     <subtitle>Events and activities at Synergy Fornebu - creating engaging experiences and community at the workplace</subtitle>
     <logo>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</logo>
     <icon>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Afterwork og musikkbingo]]></title>
+        <id>https://www.synergyfornebu.no/event/afterwork-og-musikkbingo-2</id>
+        <link href="https://www.synergyfornebu.no/event/afterwork-og-musikkbingo-2"/>
+        <updated>2026-03-02T18:31:15.730Z</updated>
+        <summary type="html"><![CDATA[Sunna's musikkbingo‍Vi gjentar suksessen! Samle laget, børst støv av kunnskapen og stemmebåndene, og vær rask! Reglene er enkle: det spilles musikk mens det spilles bingo,og hver låt har ett nummer. Du har alle svarene foran deg og alle kan hjelpe hverandre, det er lov å synge med og hvis du har lys...]]></summary>
+        <content type="html"><![CDATA[<p><img src="https://cdn.prod.website-files.com/69401214e5f0bc1f0520dc6d/69a58a194def4d43ea17cea4_25.11.18-BINGO__07048%20Large.jpeg" alt="Afterwork og musikkbingo" style="max-width: 100%;" /></p><p><strong>Sunna's musikkbingo</strong>‍</p><p>Vi gjentar suksessen! </p><p>Samle laget, børst støv av kunnskapen og stemmebåndene, og vær rask! Reglene er enkle: det spilles musikk mens det spilles bingo,<br>og hver låt har ett nummer. Du har alle svarene foran deg og alle kan hjelpe hverandre, det er lov å synge med og hvis du har lyst til å danse, kjør på!</p><p>Musikkbingoen starter kl. 16:00 og det vil bli servert gratis mat og drikke.</p><p>Ta med en kollega og bli med på en morsom avslutning på arbeidsdagen! </p><p>‍</p><p>Arrangement er gratis og for alle leietakere hos S30, S36 og ML33. </p><p>‍</p>]]></content>
+        <category label="Synergy Wellness"/>
+        <published>2026-03-02T18:31:15.730Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Afterwork og quiz]]></title>
         <id>https://www.synergyfornebu.no/event/afterwork-og-quiz</id>
