@@ -2,13 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.synergyfornebu.no/arrangementer</id>
     <title>Synergy Fornebu - Arrangementer</title>
-    <updated>2026-06-08T10:13:08.847Z</updated>
+    <updated>2026-06-09T08:55:59.774Z</updated>
     <generator>synergy-to-rss</generator>
     <link rel="alternate" href="https://www.synergyfornebu.no/arrangementer"/>
     <link rel="self" href="https://telenorbenedicte.github.io/synergy-to-rss/feed.xml"/>
     <subtitle>Events and activities at Synergy Fornebu - creating engaging experiences and community at the workplace</subtitle>
     <logo>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</logo>
     <icon>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Piknik i Fornebuhagen]]></title>
+        <id>https://www.synergyfornebu.no/event/piknik-i-fornebuhagen</id>
+        <link href="https://www.synergyfornebu.no/event/piknik-i-fornebuhagen"/>
+        <updated>2026-06-09T08:55:59.774Z</updated>
+        <summary type="html"><![CDATA[Velkommen til Piknik i Fornebuhagen! Tre helger gjennom sommeren arrangerer vi gratis aktiviteter og moro for store og små. Vi ønsker å bruke vårt flotte område på Fornebuhagen, og fylle opp med et unikt sommertilbud for barnefamilier. Ta med deg barn eller barnebarn, og opplev idylliske Fornebuhage...]]></summary>
+        <content type="html"><![CDATA[<p><img src="https://cdn.prod.website-files.com/69401214e5f0bc1f0520dc6d/6a27c9f5dcf5828e5f6f727e_2000x1333-nettside-fornebuhagen22.png" alt="Piknik i Fornebuhagen" style="max-width: 100%;" /></p><h2><strong><em>Velkommen til Piknik i Fornebuhagen! </em></strong></h2><p><strong>Tre helger gjennom sommeren arrangerer vi gratis aktiviteter og moro for store og små. </strong></p><p>Vi ønsker å bruke vårt flotte område på Fornebuhagen, og fylle opp med et unikt sommertilbud for barnefamilier. Ta med deg barn eller barnebarn, og opplev idylliske Fornebuhagen, store piknikområder og morsomme aktiviteter for hele familien! &nbsp;</p><p>Vår sommerkafé er åpen, med mulighet til å kjøpe både is, pølser, bakevarer, brus og kaffe. Slapp av i en hengekøye, la barna utfordre seg selv i klatrestativet eller lek med klassiske hageleker. Alt dette mellom møter med Peppa Gris, glittertatovering, Abby og Flora Show, ansiktsmaling, Professor Leonardos eksperiment workshop, DJ Walkie, barneløp i samarbeid med Barnekreftforeningen og mye mer!</p><p>Vi gleder oss til å se deg i Fornebuhagen! <strong>🌞</strong></p><p>‍</p><p>📍 Snarøyveien 30, 1360 Fornebu (rett ved Villa Hareløkken og sykkelstien)</p><p><strong>🚗 </strong> Gratis parkering i p-huset hele helgen, One Park: <a href="https://onepark.no/parkering/akershus/norwegian-property-fornebu/">https://onepark.no/parkering/akershus/norwegian-property-fornebu/</a></p><p><strong>🎈 </strong>Arrangement er gratis og åpent for alle </p><p><strong>⏰</strong> Åpent mellom kl. 11:00 - 15:00 lørdag og søndag</p><p>‍</p><p>Klikk på linken under, hvor du &nbsp;finner mer informasjon om programmet hver enkelt helg.</p>]]></content>
+        <category label="Synergy Social"/>
+        <published>2026-06-09T08:55:59.774Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Drikk morgenkaffen med oss!]]></title>
         <id>https://www.synergyfornebu.no/event/drikk-morgenkaffen-med-oss-2</id>
