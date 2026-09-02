@@ -2,13 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.synergyfornebu.no/arrangementer</id>
     <title>Synergy Fornebu - Arrangementer</title>
-    <updated>2026-09-02T01:44:22.474Z</updated>
+    <updated>2026-09-02T10:05:21.989Z</updated>
     <generator>synergy-to-rss</generator>
     <link rel="alternate" href="https://www.synergyfornebu.no/arrangementer"/>
     <link rel="self" href="https://telenorbenedicte.github.io/synergy-to-rss/feed.xml"/>
     <subtitle>Events and activities at Synergy Fornebu - creating engaging experiences and community at the workplace</subtitle>
     <logo>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</logo>
     <icon>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Vi får skredder på besøk]]></title>
+        <id>https://www.synergyfornebu.no/event/vi-far-skredder-pa-besok</id>
+        <link href="https://www.synergyfornebu.no/event/vi-far-skredder-pa-besok"/>
+        <updated>2026-09-02T10:05:21.989Z</updated>
+        <summary type="html"><![CDATA[Sy inn eller ut? Endelig er skredderen tilbake i Snarøyveien 30!Onsdag 9. og torsdag 10. september, mellom kl. 09:00 og 16:00, får vi skredder på besøk i Snarøyveien 30. Ta med deg alt fra dressbukser og skjørt til bluser, skjorter og dressjakke – og få dette justert eller reparert. ‍Skredderen finn...]]></summary>
+        <content type="html"><![CDATA[<p><img src="https://cdn.prod.website-files.com/69401214e5f0bc1f0520dc6d/6a97e1a24da500a4b1dda907_Nettside.jpg" alt="Vi får skredder på besøk" style="max-width: 100%;" /></p><h2>Sy inn eller ut?&nbsp;Endelig er skredderen tilbake i Snarøyveien 30!</h2><p>Onsdag 9. og torsdag 10. september, mellom kl. 09:00 og 16:00, får vi skredder på besøk i Snarøyveien 30. </p><p>Ta med deg alt fra dressbukser og skjørt til bluser, skjorter og dressjakke – og få dette justert eller reparert. </p><p>‍</p><p>Skredderen finner du på plan 3, Bygg C, Snarøyveien 30. </p><p>‍</p><p><strong>For alle ansatte hos S30, S36 og ML33. </strong></p>]]></content>
+        <category label="Synergy Wellness"/>
+        <published>2026-09-02T10:05:21.989Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Drikk morgenkaffen med oss!]]></title>
         <id>https://www.synergyfornebu.no/event/drikk-morgenkaffen-med-oss-3</id>
