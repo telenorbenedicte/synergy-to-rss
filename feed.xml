@@ -2,13 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.synergyfornebu.no/arrangementer</id>
     <title>Synergy Fornebu - Arrangementer</title>
-    <updated>2026-11-25T16:20:44.550Z</updated>
+    <updated>2026-11-27T15:44:22.164Z</updated>
     <generator>synergy-to-rss</generator>
     <link rel="alternate" href="https://www.synergyfornebu.no/arrangementer"/>
     <link rel="self" href="https://telenorbenedicte.github.io/synergy-to-rss/feed.xml"/>
     <subtitle>Events and activities at Synergy Fornebu - creating engaging experiences and community at the workplace</subtitle>
     <logo>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</logo>
     <icon>https://cdn.prod.website-files.com/693ffbf0eacd2e8c1f53afb9/6940915a6b5c759e77ca018e_Favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Gavebutikk med Varsity Headwear]]></title>
+        <id>https://www.synergyfornebu.no/event/gavebutikk-med-varsity-headwear</id>
+        <link href="https://www.synergyfornebu.no/event/gavebutikk-med-varsity-headwear"/>
+        <updated>2026-11-27T15:44:22.164Z</updated>
+        <summary type="html"><![CDATA[Gavebutikk med Varsity Headwear‍📅 Onsdag 9. og torsdag 10. desember 🕒 11:00 – 15:00📍 Snarøyveien 30, bygg C‍På jakt etter en gave til deg selv eller noen andre? 9. og 10. desember får vi besøk av Varsity Headwear – den norske spesialisten på capser og luer.Her kan du ta turen innom og oppdage et ...]]></summary>
+        <content type="html"><![CDATA[<p><img src="https://cdn.prod.website-files.com/69401214e5f0bc1f0520dc6d/6b098de5cef484dcd1bf906c_Varsity%20Headwear.png" alt="Gavebutikk med Varsity Headwear" style="max-width: 100%;" /></p><h2>Gavebutikk med Varsity Headwear</h2><p>‍</p><p>📅 Onsdag 9. og torsdag 10. desember <br>🕒 11:00 – 15:00<br>📍 Snarøyveien 30, bygg C<br></p><p>‍</p><p><strong>På jakt etter en gave til deg selv eller noen andre? </strong></p><p>9. og 10. desember får vi besøk av Varsity Headwear – den norske spesialisten på capser og luer.</p><p>Her kan du ta turen innom og oppdage et utvalg av stilrene unisex-modeller. Kanskje finner du en ny favoritt, eller årets julegave?</p><p>Velkommen innom!</p>]]></content>
+        <category label="Synergy Social"/>
+        <published>2026-11-27T15:44:22.164Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Julegrantenning]]></title>
         <id>https://www.synergyfornebu.no/event/julegrantenning</id>
